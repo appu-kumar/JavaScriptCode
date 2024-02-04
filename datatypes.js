@@ -1,5 +1,12 @@
 "use strict";                // this statement allows to write newer version of js.
 
+// Note:: js is dynamically types language, because data type is defined at run time.
+
+// types of dataTypes   1)primitive(pass by value)  2)non primitive(pass by reference)
+//primitive type(pass by value) 7::::::::: String,Number,Boolean,null,undefined,Symbol,BigInt
+//non primitive types(pass by reference):::: object,arrays,function
+
+
 
 let age=35;           // number
 let names="rahul kumar";  // string
