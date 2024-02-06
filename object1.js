@@ -5,6 +5,7 @@
 
 // create object using literals
 
+const obj={}  // {} yehi object hai okay
 const symbolKey=Symbol("myphoto");
 
 const jsUser={
