@@ -3,13 +3,13 @@
 const tinderUser1=new Object();  // similar like Number()   // singleton provide karta hai like in java                {}  ye create karta hai
 const tinderUser2={};
 
-// tinderUser1 and tinderUser2  both are object declarations
+// tinderUser1 and tinderUser1  both are object declarations
 
-tinderUser2.name="sita";
-tinderUser2.id=1;
-tinderUser2.emailId="sk@gmail.com";
+tinderUser1.name="sita";
+tinderUser1.id=1;
+tinderUser1.emailId="sk@gmail.com";
 
-console.log(tinderUser2);
+console.log(tinderUser1);
 
 
 // how to merge two object
