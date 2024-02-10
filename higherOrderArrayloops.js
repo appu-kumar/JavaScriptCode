@@ -62,11 +62,23 @@ for (const key in user) {
         db se data array ki form me aata hai   [{}{}{}{}] [[][][][][]]    in me traverse karne ke liye forEach loop sahi hai
 */
 
+
+
 const mobileInfo = [{ type: "nokia", price: 5000, pkId: 345 }, { type: "jio", price: 5000, pkId: 345 }, { type: "iphone", price: 5000, pkId: 345 }, { type: "mi", price: 5000, pkId: 345 }];
 
+/*
 /// function 3 paramters leta hi marzi zitna use krna hai kro   item,idx,pura arraay 
 mobileInfo.forEach((item)=>{                                 //(item,idx,arr)
     console.log(item.type);
     // console.log(idx);
     // console.log(arr);
 });
+*/
+
+/// forEach loop takes the item and manipulate that's it.
+
+// disadv. it does not return anything
+
+const data=mobileInfo.forEach((item)=>{return item});          // we will se this thing with mobileInfo.filter() okay
+console.log(data);
+
