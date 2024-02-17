@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<!--
+
+===>In JavaScript, events are actions or occurrences that happen in the browser, triggered by the user or the browser itself. Here are some common events in JavaScript:
+
+1) Mouse Events: These events occur when a user interacts with the mouse.
+        onclick: Occurs when the user clicks an element.
+        onmouseover: Occurs when the mouse pointer is moved onto an element.
+        onmouseout: Occurs when the mouse pointer is moved out of an element.
+        onmousedown: Occurs when the mouse button is pressed down over an element.
+        onmouseup: Occurs when the mouse button is released over an element.
+        onmousemove: Occurs when the mouse pointer is moved while over an element.
+        
+2)Keyboard Events: These events occur when a user interacts with the keyboard.
+        keydown: Occurs when a key is pressed down.
+        keyup: Occurs when a key is released.
+        keypress: Occurs when a key is pressed down and then released.
+
+3)Form Events: These events occur when a user interacts with a form element.
+        submit: Occurs when a form is submitted.
+        reset: Occurs when a form is reset.
+        focus: Occurs when an element gets focus.
+        blur: Occurs when an element loses focus.
+        change: Occurs when the value of an input element changes.
+        input: Similar to change, but fires immediately upon any change in value.
+
+4)Window Events: These events occur on the window object.
+        load: Occurs when a page has finished loading.
+        resize: Occurs when the browser window is resized.
+        scroll: Occurs when the user scrolls in the window.
+5)Document Events: These events occur on the document object.
+        DOMContentLoaded: Occurs when the HTML document has been fully loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+        readystatechange: Occurs when the readyState attribute of the document has changed.
+        DOMContentLoaded: Occurs when the DOM is ready.
+
+6)Media Events: These events occur on media elements like <audio> and <video>.
+        play: Occurs when the media has started playing.
+        pause: Occurs when the media has been paused.
+
+These are just some of the events available in JavaScript. Each event can be associated with event handlers, which are JavaScript functions that execute when the event occurs. Event handling is a fundamental aspect of building interactive web applications.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+    <title>Events</title>
+</head>
+
+<body>
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/19422011/pexels-photo-19422011/free-photo-of-swan-on-the-riverbank-stretching-its-neck-to-a-ray-of-sunlight-breaking-through-the-tree-branches.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/20219004/pexels-photo-20219004/free-photo-of-a-table-with-many-different-types-of-cassettes.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+                    alt="japan"></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="river"></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="owl"></li>
+            <!--  onclick="alert('owl')"  1st method to write event which is onclik inside the html tag, ye vanila js me acha tarika nhi hai, jb project scale karega tag dikkat dega-->
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/5386074/pexels-photo-5386074.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="prayer"></li>
+            <li><a href="https://google.com" id="google">google.com</a></li>
+        </ul>
+
+    </div>
+
+    <script>
+             ///////////// second way of creating event  old way hai , feature less deta hai okay. onclik me problem occure ho skti hai
+            //   const owl=document.getElementById('owl').onclick=function(){
+            //      alert("owl clicked");
+            //   }
+            
+            // j-query old---> having onEventListner()
+            // third way it is best way 
+            /*
+            document.getElementById('owl').addEventListener('click',(e)=>{
+                // alert("hello");
+                // e is biggest object please just go through
+
+            },false)         // false bydefault  this false makes the event bubbling means in---->out
+              */
+            // type, target, toElement,srcElement etc. of e object
+
+        //    document.getElementById('images').addEventListener('click',function(e){
+        //           console.log("clicked inside the ul");
+        //    })
+
+        //    document.getElementById('owl').addEventListener('click',function(e){
+        //       console.log('clicked on owl');
+        //       e.stopPropagation();     // images wala event click nahi hoga means in--->out nhi hoga
+        //    })
+
+            
+        //    document.getElementById('google').addEventListener('click',(e)=>{
+        //       e.preventDefault();   // defalut kya hia ki hm link pe click kre aur google.com pe chale jaye but isse mai rokna chahta hu.
+        //    },false)
+
+
+        document.getElementById('images').addEventListener('click',(e)=>{
+
+            const id=e.target.id;
+             if(id==='owl')
+             {
+                e.target.parentNode.remove();
+             }
+             else if(id==='river')
+             {
+                  e.target.parentNode.remove();
+             }else  if(id==='prayer')
+             {
+                e.target.parentNode.remove();
+             }
+             else if(id==='photoshop')
+             {
+                 e.target.parentNode.remove();
+             }
+             else if(id==='japan')
+             {
+                   e.target.parentNode.remove();
+             }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeleteAndEdit the Tag by Js</title>
+</head>
+
+<body>
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+        const ul = document.querySelector('.languages');
+
+        ///// creation of the Element
+        function createElement(lang) {
+            const li = document.createElement('li');
+            console.log(li);
+            li.className = 'language';
+            const text = document.createTextNode(`${lang}`);
+            li.append(text);
+            ul.appendChild(li);
+        }
+
+        createElement('Java');
+        createElement('Go');
+        createElement('Cpp');
+        createElement('C');
+
+
+        // edit 
+        const secondLi = document.querySelector('li:nth-child(2)');
+        console.log(secondLi);
+        const newLi = document.createElement('li');
+        newLi.innerText = "java is the programming language";
+        secondLi.replaceWith(newLi);
+
+
+        // delete
+        const toBeDeletedLi = document.querySelector('li:nth-child(1)');
+        toBeDeletedLi.remove();
+
+
+    </script>
+</body>
+
+</html>

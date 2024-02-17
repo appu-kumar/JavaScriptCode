@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag creation</title>
+</head>
+
+<body>
+
+
+    <script>
+        function helper(tag) {
+            const div = document.createElement(tag);
+            // console.log(div);
+            div.className = 'container';
+            div.id = 'main';
+            div.style.color = 'red';
+            div.innerText = 'Appu Kumar';
+            div.setAttribute('title', 'main container hai');// yese id bhi de skte hai
+            return div;
+        }
+        const body = document.body;
+        let i = 0;
+        while (i <= 2) {
+            let tag = prompt("enter tag");
+            body.appendChild(helper(tag));
+            i++;
+        }
+
+    </script>
+</body>
+
+</html>

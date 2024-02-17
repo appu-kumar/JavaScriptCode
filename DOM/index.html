@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="heading">
+            Books
+        </h1>
+        <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem porro sequi expedita impedit
+            unde debitis
+            atque nam iure dolores eaque reprehenderit, ea a, labore exercitationem cupiditate itaque reiciendis
+            deleniti. Nemo facere earum numquam reiciendis velit similique dolores cupiditate adipisci unde?</p>
+    </div>
+
+    <script>
+        /////////// document is main object which is used to select tag, create tag and all.
+        const obj = document.getElementById('container');
+        // obj.innerHTML = "<table> <th>Name</th> <th>Id</th> <th>Roll</th> </tr > <tr><td>Appu</td>  <td>233</td><td>23</td></tr><tr> <td>Raj</td> <td>233</td><td>26</td></tr></table >"  // obj.innerHTML se <>point this area</>
+        //obj.innerHTML="3";          // ye saraa content deta hai visible, not visible,tags sab kuch
+        //obj.textContent="5";        // ye visible and not visible sab deta hai but tags nhi dega ho bhi iss pointing tag ke under hoga
+        //obj.innerText="9";             // ye sirf visible text dega. 
+
+        // NodeList --->document.querySelector() se atta hai ok
+        // Html collections----->document.getElementsByName("list")  ye html collections return karta hai
+
+    </script>
+</body>
+
+</html>

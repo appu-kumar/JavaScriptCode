@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Element creation</title>
+</head>
+<body>
+         <div class="week">
+            <div class="day">Sunday</div>
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+         </div>
+</body>
+
+  <script>
+            //  const week=document.getElementsByClassName('week')[0]; ok but i will use querySelector
+            const week=document.querySelector('.week');
+            //  console.log(week);
+
+            //   // how to get all the childeren
+            //  console.log(week.children);
+            //  const children=week.children;
+            //  for(let i=0;i<children.length;i++)
+            //  {
+            //     console.log(children[i].innerText);
+            //  }
+
+            // console.log(week.firstElementChild);
+            // console.log(week.lastElementChild);
+
+
+            /// how to select child directly
+
+            const day=document.querySelector('.day');
+            // console.log(day);
+            // console.log(day.parentElement.style.backgroundColor='red');
+            // console.log(day.nextElementSibling.style.backgroundColor='red');
+            // console.log(day.nextElementSibling.style.color='red');
+            // console.log(day.previousElementSibling);  // null ok
+
+            //console.log("Nodes::",week.childNodes); // 9 why kyuki ye tag ke aage jo space hai usse bhi ek text manta hai dom, even comment ko bhi ek node manta hai
+
+
+
+
+  </script>
+</html>

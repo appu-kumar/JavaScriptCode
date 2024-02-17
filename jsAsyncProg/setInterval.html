@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setIntegerval </title>
+</head>
+<body>
+          <h1>This is Appu</h1>
+          <button id="start">start</button>
+          <button id="stop">stop</button>
+
+
+
+</body>
+
+<script>
+          
+          const changeMe=function(){
+              document.querySelector('h1').innerHTML=`hi ${Date.now()}`;
+          }
+          let stopMe;
+          document.querySelector('#start').addEventListener('click',()=>{
+           stopMe=setInterval(changeMe,1000);  
+          })
+          
+          document.querySelector('#stop').addEventListener('click',()=>{
+          clearInterval(stopMe);
+          })
+          
+</script>
+</html>

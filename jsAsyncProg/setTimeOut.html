@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async aur browser methods</title>
+</head>
+
+<body>
+    <!-- <h1>Ram Ram Sare ne</h1>
+           <button id="stop">Stop</button> -->
+
+    <!-- <div id="container">
+        <h1>Bosscoder Guaranteeds</h1>
+        <ul>
+
+            <li>After Two months you will be eligible for placements</li>
+            <li>DSA top Quality.</li>
+            <li>LLD and HLD with Project.</li>
+            <li>Project will be taught by experienced guy.</li>
+        </ul>
+
+        <button id="button"><h1>After nine months  see status</h1></button>
+    </div> -->
+
+    <h1>This is the DSA course</h1>
+    <button id="button">stop</button>
+
+   
+</body>
+
+<script>
+    // const changeText=function(){
+    //     document.querySelector('h1').innerHTML="Ram Ram Bhio ko"
+    // }
+    // setTimeout(changeText,2000);
+
+
+    // document.querySelector('button').addEventListener('click',()=>{
+    //     document.getElementById('container').innerHTML='<h1>chal nikal</h1>';
+    // })
+
+
+    // setTimeout is the web Api method
+    const stopme=setTimeout(()=>{
+        document.querySelector('h1').innerHTML='This is the Latest DSA Course';
+    },2000)
+
+    document.querySelector('#button').addEventListener('click',()=>{
+        clearTimeout(stopme);
+        console.log("stop hua");
+    })
+   
+</script>
+
+</html>
