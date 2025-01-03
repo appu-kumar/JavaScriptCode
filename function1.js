@@ -1,6 +1,7 @@
 
 
 
+// function statement aka function declaration
 function adding(){
       console.log("adding");
 }
@@ -26,3 +27,12 @@ console.log(add3(3,3,3,3,3,3,3,3,3,3));
 
 const ans=add2;          // ans will store the reference of the function.
 console.log(add2(2,3));  // arguments
+
+
+// annoymous function is that function which is not holding any name below function is the example.
+// function expression     we are assigning function like variable
+var add =  function (){
+   console.log("add kar dia");
+}
+
+
