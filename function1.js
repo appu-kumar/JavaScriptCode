@@ -36,3 +36,8 @@ var add =  function (){
 }
 
 
+// arrow function
+var add = ()=>{
+    console.log("arrow funciton")
+}
+
