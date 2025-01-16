@@ -131,17 +131,17 @@ console.log(mobileInfo.myMap(callback))
 
 // my reduce method
 
-let ans = mobileInfo.reduce((acc,curr)=>{
-    if(acc.hasOwnProperty(curr.price)){
-        acc[curr.price]+=1;
-    }
-    else{
-        acc[curr.price]=1;
-    }
-    return acc;
-},{});
+// let ans = mobileInfo.reduce((acc,curr)=>{
+//     if(acc.hasOwnProperty(curr.price)){
+//         acc[curr.price]+=1;
+//     }
+//     else{
+//         acc[curr.price]=1;
+//     }
+//     return acc;
+// },{});
 
-console.log(ans)
+// console.log(ans)
 
 
 
