@@ -1,11 +1,21 @@
 
+// OOPs
+
+/*
+
+1)Object literal(used for single object)
+2)functional contrutor(used in protypical,it is with js from origin)
+3)class(ES6)
+4)factory method(not in use)
+.... might be more.
+
+*/
+
+
 // create object using class baad me dekhenge
-
-
-
 // create object using literals
 
-const obj={}  // {} yehi object hai okay
+const obj={}  // {} yehi object hai okay  // single object, no inheritance   obj2 with these parameter create nhi hoga, it is not class, construtor function etc.
 const symbolKey=Symbol("myphoto");
 
 const jsUser={
