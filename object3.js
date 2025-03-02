@@ -14,6 +14,12 @@
 function User(name,password){
     this.name=name;
     this.password=password;
+    this.greeting = function (age){
+        console.log(`Hello this is ${this.name} ${age}`);
+    }
+    // this.greeting= function(age,gender){   // this will override the previous method okay 
+    //     console.log(`Hello this is ${this.name} ${gender} ${age}`);
+    // }
     return this;   // automatically this is being returned, return this is option
 }
 
@@ -21,8 +27,8 @@ function User(name,password){
 
 let user1 = new User('appu','123');
 let user2 = new User("akash",'2324')
-console.log(user1)
-console.log(user2)
+user1.greeting(23);
+user2.greeting('male',25);
 
 
 // The User function is a constructor function.
@@ -30,3 +36,12 @@ console.log(user2)
 // Properties are assigned to the new object.
 // The new object is returned automatically.
 // Using class syntax is a modern alternative.
+
+
+let obj10 = {}   // internaly creates the [[prototype]](accessed by __proto__ in static object creationg)  with constructor function prototype is used
+console.log('10',obj10);
+obj10.__proto__.print = function (){
+    console.log("oye namaste")
+}
+
+obj10.print();
