@@ -44,4 +44,35 @@ obj10.__proto__.print = function (){
     console.log("oye namaste")
 }
 
-obj10.print();
+/*
+
+__proto__ is a property of every object and points to the prototype from which the object inherits.
+It links an instance to its constructor’s prototype (sparrow.__proto__ === Bird.prototype).
+It allows us to access properties/methods defined on the prototype.
+
+*/
+
+// obj10.print();
+
+function Bird(name,color,canFly){
+    this.name = name;
+    this.color = color;
+    this.canFly = canFly;
+    // Bird.prototype.print = function (){    // not recommended because every time it will create the function and assign to prototype time waste and memeory waste
+    //     console.log(`[name:${this.name},color:${this.color},canfly:${this.canFly}]`);
+    // }
+}
+
+Bird.prototype.print = function (){    // function is an object in js that is why we are able to add properties inside it
+    console.log(`[name:${this.name},color:${this.color},canfly:${this.canFly}]`);
+}
+
+// with the help of the object we use __proto__  and with constructor name we use prototype see above
+let sparrow = new Bird('sparrow','red',true);
+// sparrow.__proto__.print = function () {                   // not recommended because it modifies the logic of the every object
+//     console.log(`[name:${this.name},color:${this.color},canfly:${this.canFly},'xyx]`);
+// }
+sparrow.print();
+
+let crow = new Bird('crow','black',true);
+crow.print();
