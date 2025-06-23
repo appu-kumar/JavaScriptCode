@@ -9,7 +9,22 @@
       <!--
           ==>  javaScript is:-            Default Behaviours
                    1)Synchronous.
-                   2)Single threaded.
+                   2)Single threaded(single call stack ok)
+                   3)JavaScript becomes asynchronous only when using:
+
+                        setTimeout, setInterval
+
+                        AJAX/fetch API
+
+                        Promises
+
+                        async/await
+
+                        Web APIs (in browsers)
+
+                        Node.js APIs (for I/O, file system, etc.)
+
+                        These features are provided by the environment (browser or Node.js), not the JavaScript engine itself.
 
            ==>Execution Context  execute one line of code at a time
              |
